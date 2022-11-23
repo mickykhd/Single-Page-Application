@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 const url = "https://www.boredapi.com/api/activity";
 const Bored = () => {
   const [bored, setBored] = useState({ activity: "", type: "" });
@@ -42,6 +43,12 @@ const Bored = () => {
       >
         {loading ? "Generating Task" : "Get Task"}
       </button>
+      <li style={{ color: "blue" }}>
+        {" "}
+        <Link style={{ color: "blue" }} to="/jokes">
+          Jokes
+        </Link>
+      </li>
     </>
   );
 };
